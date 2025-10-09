@@ -1,12 +1,12 @@
 "use client"
-
 import { useEffect, useRef, useState } from "react"
 
 export default function AquamarePage() {
-  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({})
+  const [isVisible, setIsVisible] = useState({})
   const [scrollY, setScrollY] = useState(0)
-  const observerRef = useRef<IntersectionObserver | null>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const observerRef = useRef(null)
+  const videoRef = useRef(null)
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -36,9 +36,7 @@ export default function AquamarePage() {
           video.currentTime = 0
         }
       }
-
       video.addEventListener("timeupdate", handleTimeUpdate)
-
       return () => {
         observerRef.current?.disconnect()
         window.removeEventListener("scroll", handleScroll)
@@ -52,51 +50,126 @@ export default function AquamarePage() {
     }
   }, [])
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    setMobileMenuOpen(false)
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300 hover:bg-background">
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold tracking-tight text-primary transition-transform duration-300 hover:scale-110">
-            ONE Water
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+          <div className="flex items-center justify-between">
+            <div className="text-xl sm:text-2xl font-bold tracking-tight text-primary transition-transform duration-300 hover:scale-105">
+              ONE Water
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+              <a
+                href="#sobre"
+                onClick={(e) => handleNavClick(e, '#sobre')}
+                className="text-sm lg:text-base hover:text-primary transition-all duration-300 hover:translate-y-[-2px] whitespace-nowrap"
+              >
+                Sobre
+              </a>
+              <a
+                href="#beneficios"
+                onClick={(e) => handleNavClick(e, '#beneficios')}
+                className="text-sm lg:text-base hover:text-primary transition-all duration-300 hover:translate-y-[-2px] whitespace-nowrap"
+              >
+                Benefícios
+              </a>
+              <a
+                href="#processo"
+                onClick={(e) => handleNavClick(e, '#processo')}
+                className="text-sm lg:text-base hover:text-primary transition-all duration-300 hover:translate-y-[-2px] whitespace-nowrap"
+              >
+                Processo
+              </a>
+              <a
+                href="#produtos"
+                onClick={(e) => handleNavClick(e, '#produtos')}
+                className="text-sm lg:text-base hover:text-primary transition-all duration-300 hover:translate-y-[-2px] whitespace-nowrap"
+              >
+                Produtos
+              </a>
+              <a
+                href="#contato"
+                onClick={(e) => handleNavClick(e, '#contato')}
+                className="text-sm lg:text-base hover:text-primary transition-all duration-300 hover:translate-y-[-2px] whitespace-nowrap"
+              >
+                Contato
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-foreground transition-transform duration-300 hover:scale-110 p-2"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#sobre"
-              className="text-sm hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
-            >
-              Sobre
-            </a>
-            <a
-              href="#beneficios"
-              className="text-sm hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
-            >
-              Benefícios
-            </a>
-            <a
-              href="#processo"
-              className="text-sm hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
-            >
-              Processo
-            </a>
-            <a
-              href="#produtos"
-              className="text-sm hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
-            >
-              Produtos
-            </a>
-            <a
-              href="#contato"
-              className="text-sm hover:text-primary transition-all duration-300 hover:translate-y-[-2px]"
-            >
-              Contato
-            </a>
+
+          {/* Mobile Navigation Drawer */}
+          <div 
+            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+              mobileMenuOpen ? 'max-h-80 opacity-100 mt-4' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <div className="flex flex-col space-y-3 py-4 border-t border-border">
+              <a
+                href="#sobre"
+                onClick={(e) => handleNavClick(e, '#sobre')}
+                className="text-base hover:text-primary transition-all duration-300 py-2 px-4 hover:bg-primary/10 rounded-md"
+              >
+                Sobre
+              </a>
+              <a
+                href="#beneficios"
+                onClick={(e) => handleNavClick(e, '#beneficios')}
+                className="text-base hover:text-primary transition-all duration-300 py-2 px-4 hover:bg-primary/10 rounded-md"
+              >
+                Benefícios
+              </a>
+              <a
+                href="#processo"
+                onClick={(e) => handleNavClick(e, '#processo')}
+                className="text-base hover:text-primary transition-all duration-300 py-2 px-4 hover:bg-primary/10 rounded-md"
+              >
+                Processo
+              </a>
+              <a
+                href="#produtos"
+                onClick={(e) => handleNavClick(e, '#produtos')}
+                className="text-base hover:text-primary transition-all duration-300 py-2 px-4 hover:bg-primary/10 rounded-md"
+              >
+                Produtos
+              </a>
+              <a
+                href="#contato"
+                onClick={(e) => handleNavClick(e, '#contato')}
+                className="text-base hover:text-primary transition-all duration-300 py-2 px-4 hover:bg-primary/10 rounded-md"
+              >
+                Contato
+              </a>
+            </div>
           </div>
-          <button className="md:hidden text-foreground transition-transform duration-300 hover:scale-110">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
         </nav>
       </header>
 
