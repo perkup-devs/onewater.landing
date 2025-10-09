@@ -58,7 +58,7 @@ export default function AquamarePage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300 hover:bg-background">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="text-2xl font-bold tracking-tight text-primary transition-transform duration-300 hover:scale-110">
-            One
+            ONE Water
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a
@@ -118,7 +118,7 @@ export default function AquamarePage() {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202025-10-08%20at%202.57.22%20PM%20%28online-video-cutter.com%29-W9ufOEvhABEQRUqH1OntI6DNJrOre2.mp4"
+              src="agua-mexendo.mp4"
               type="video/mp4"
             />
           </video>
@@ -247,7 +247,7 @@ export default function AquamarePage() {
                 }`}
               >
                 <img
-                  src="/ocean-underwater-marine-life-coral-reef.jpg"
+                  src="/bixo-na-agua.jpg"
                   alt="Vida marinha"
                   className="rounded-xl shadow-lg w-full hover:scale-105 transition-transform duration-500"
                 />
