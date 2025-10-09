@@ -260,7 +260,7 @@ export default function AquamarePage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div
@@ -311,7 +311,7 @@ export default function AquamarePage() {
             >
               O Oceano e Suas Riquezas Naturais
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16 overflow-hidden">
               <div
                 id="ocean-image"
                 data-animate
@@ -492,7 +492,7 @@ export default function AquamarePage() {
       {/* Composition Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto overflow-hidden">
             <h2
               id="composition-title"
               data-animate
@@ -872,7 +872,7 @@ export default function AquamarePage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">One</h3>
+              <h3 className="text-2xl font-bold mb-4">ONE Water</h3>
               <p className="text-sm opacity-90 text-pretty">
                 Água premium purificada do oceano, enriquecida com mais de 63 minerais naturais.
               </p>
