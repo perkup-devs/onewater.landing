@@ -58,7 +58,7 @@ export default function AquamarePage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-all duration-300 hover:bg-background">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="text-2xl font-bold tracking-tight text-primary transition-transform duration-300 hover:scale-110">
-            AQUAMARE
+            One
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a
@@ -166,7 +166,7 @@ export default function AquamarePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-balance">Pioneirismo e Inovação</h2>
             <div className="prose prose-lg max-w-none text-pretty leading-relaxed">
               <p className="text-lg mb-6">
-                A <strong>AQUAMARE</strong> é uma empresa 100% brasileira, pioneira no desenvolvimento de tecnologias
+                A <strong>One</strong> é uma empresa 100% brasileira, pioneira no desenvolvimento de tecnologias
                 revolucionárias no segmento de produtos saudáveis. Nossa missão é proporcionar bem-estar excepcional e
                 qualidade de vida superior através da inovação científica.
               </p>
@@ -178,7 +178,7 @@ export default function AquamarePage() {
               </p>
               <p className="text-lg">
                 Esta tecnologia inovadora estabelece um novo paradigma para o segmento de água potável e produtos
-                saudáveis, posicionando a AQUAMARE como referência em inovação e excelência no mercado nacional e
+                saudáveis, posicionando a One como referência em inovação e excelência no mercado nacional e
                 internacional.
               </p>
             </div>
@@ -214,7 +214,7 @@ export default function AquamarePage() {
             >
               <h3 className="text-2xl font-bold mb-4 text-primary">Compromisso Socioambiental</h3>
               <p className="text-pretty leading-relaxed">
-                A AQUAMARE defende e pratica ativamente o conceito de responsabilidade socioambiental, estimulando o
+                A One defende e pratica ativamente o conceito de responsabilidade socioambiental, estimulando o
                 respeito profundo ao meio ambiente e valorizando iniciativas ligadas à qualidade de vida sustentável.
                 Conscientes de nosso compromisso com o planeta, investimos continuamente em tecnologias e práticas
                 sustentáveis, utilizando insumos 100% recicláveis e processos que não exploram recursos hídricos de água
@@ -295,7 +295,7 @@ export default function AquamarePage() {
         </div>
       </section>
 
-      {/* Aqua+ Product Section */}
+      {/* One Product Section */}
       <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
@@ -306,7 +306,7 @@ export default function AquamarePage() {
                 isVisible["aqua-title"] ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             >
-              Aqua+, a água Rica em Oligoelementos
+              One - Água super premium
             </h2>
             <div
               id="aqua-card"
@@ -316,14 +316,14 @@ export default function AquamarePage() {
               }`}
             >
               <p className="text-xl mb-6 text-pretty leading-relaxed">
-                A <strong>Aqua+</strong> representa uma revolução no conceito de hidratação premium. Trata-se de uma
+                A <strong>One</strong> representa uma revolução no conceito de hidratação premium. Trata-se de uma
                 água extraordinariamente rica em oligoelementos essenciais que o corpo humano necessita em doses
                 precisas diárias, incluindo ferro, cobalto, lítio, manganês, selênio, zinco, fósforo e vanádio, entre
                 muitos outros.
               </p>
               <p className="text-lg mb-6 text-pretty leading-relaxed">
                 Com o objetivo de preservar integralmente as propriedades benéficas das águas marinhas e auxiliar o
-                organismo na missão vital de manter-se equilibrado e saudável, a fórmula exclusiva da Aqua+ conseguiu
+                organismo na missão vital de manter-se equilibrado e saudável, a fórmula exclusiva da One conseguiu
                 manter mais de 60 destes minerais preciosos em estrutura de oligoelementos — ou seja, em concentrações
                 inferiores a 0,002 mg/L — através do princípio revolucionário da nanotecnologia associado ao conceito
                 milenar de thalassoterapia.
@@ -334,7 +334,7 @@ export default function AquamarePage() {
             </div>
             <p className="text-lg text-muted-foreground text-pretty">
               A diversidade excepcional e a quantidade precisa destes oligoelementos representam o grande diferencial
-              competitivo entre a Aqua+ e as demais águas disponíveis no mercado, que oferecem, em média, apenas 12
+              competitivo entre a One e as demais águas disponíveis no mercado, que oferecem, em média, apenas 12
               minerais.
             </p>
           </div>
@@ -509,7 +509,7 @@ export default function AquamarePage() {
                 isVisible["minerals-card"] ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             >
-              <h3 className="text-3xl font-bold mb-8 text-center">Minerais Naturais Presentes na Aqua+</h3>
+              <h3 className="text-3xl font-bold mb-8 text-center">Minerais Naturais Presentes na One</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
                 {[
                   "Cálcio",
@@ -740,7 +740,7 @@ export default function AquamarePage() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance animate-pulse-slow">
-            Experimente a Excelência da Aqua+
+            Experimente a Excelência da One
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-pretty leading-relaxed">
             Descubra a diferença incomparável de uma água premium enriquecida com mais de 63 minerais naturais do
@@ -775,7 +775,7 @@ export default function AquamarePage() {
                 isVisible["contact-card"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <h3 className="text-2xl font-bold mb-6">AQUAMARE Beneficiadora e Distribuidora de Água Ltda.</h3>
+              <h3 className="text-2xl font-bold mb-6">One Beneficiadora e Distribuidora de Água Ltda.</h3>
               <div className="space-y-4 text-lg">
                 <div className="flex items-center justify-center gap-3 hover:translate-x-2 transition-transform duration-300">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -788,22 +788,6 @@ export default function AquamarePage() {
                   </svg>
                   <span>+55 (11) 3873-2968</span>
                 </div>
-                <div className="flex items-center justify-center gap-3 hover:translate-x-2 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <a
-                    href="mailto:imprensa@aquamare.com.br"
-                    className="hover:text-primary transition-colors duration-300"
-                  >
-                    imprensa@aquamare.com.br
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -815,7 +799,7 @@ export default function AquamarePage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">AQUAMARE</h3>
+              <h3 className="text-2xl font-bold mb-4">One</h3>
               <p className="text-sm opacity-90 text-pretty">
                 Água premium purificada do oceano, enriquecida com mais de 63 minerais naturais.
               </p>
@@ -852,7 +836,7 @@ export default function AquamarePage() {
           </div>
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-80">
             <p>
-              © {new Date().getFullYear()} AQUAMARE Beneficiadora e Distribuidora de Água Ltda. Todos os direitos
+              © {new Date().getFullYear()} One Beneficiadora e Distribuidora de Água Ltda. Todos os direitos
               reservados.
             </p>
           </div>
