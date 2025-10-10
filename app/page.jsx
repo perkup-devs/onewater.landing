@@ -834,16 +834,33 @@ export default function AquamarePage() {
             >
               <h3 className="text-2xl font-bold mb-6">One Beneficiadora e Distribuidora de Água Ltda.</h3>
               <div className="space-y-4 text-lg">
+                {/* <div className="flex items-center justify-center gap-3 hover:translate-x-2 transition-transform duration-300"> */}
+                {/*   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"> */}
+                {/*     <path */}
+                {/*       strokeLinecap="round" */}
+                {/*       strokeLinejoin="round" */}
+                {/*       strokeWidth={2} */}
+                {/*       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" */}
+                {/*     /> */}
+                {/*   </svg> */}
+                {/*   <span>+55 (11) 3873-2968</span> */}
+                {/* </div> */}
+
                 <div className="flex items-center justify-center gap-3 hover:translate-x-2 transition-transform duration-300">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span>+55 (11) 3873-2968</span>
+                  <a
+                    href="mailto:imprensa@aquamare.com.br"
+                    className="hover:text-primary transition-colors duration-300"
+                  >
+                    contato@thewater.one
+                  </a>
                 </div>
               </div>
             </div>
@@ -856,12 +873,14 @@ export default function AquamarePage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">ONE Water</h3>
+              <a href="https://perkuptoken.com">
+                <img className="pb-5" src="LOGO-ONE-WATER_br.png" />
+              </a>
               <p className="text-sm opacity-90 text-pretty">
                 Água premium purificada do oceano, enriquecida com mais de 63 minerais naturais.
               </p>
             </div>
-            <div>
+            <div className="md:text-center">
               <h4 className="font-bold mb-4">Navegação</h4>
               <ul className="space-y-2 text-sm">
                 {["Sobre", "Benefícios", "Processo", "Produtos", "Contato"].map((link) => (
