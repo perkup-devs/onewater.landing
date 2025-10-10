@@ -873,9 +873,14 @@ export default function AquamarePage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <a href="https://perkuptoken.com">
-                <img className="pb-5" src="LOGO-ONE-WATER_br.png" />
-              </a>
+              <div className="w-45 relative mb-10">
+                <a href="https://perkuptoken.com">
+                  <img className="pb-5" src="LOGO-ONE-WATER_br.png" />
+                  <p className="absolute right-0 -bottom-1 text-sm">
+                    powered by <img className="inline w-14 -ml-1 -mt-1" src="logo_perkup.png" />
+                  </p>
+                </a>
+              </div>
               <p className="text-sm opacity-90 text-pretty">
                 Água premium purificada do oceano, enriquecida com mais de 63 minerais naturais.
               </p>
