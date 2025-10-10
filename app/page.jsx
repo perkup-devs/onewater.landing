@@ -195,7 +195,7 @@ export default function AquamarePage() {
               type="video/mp4"
             />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/80" />
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/80" /> */}
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in">
